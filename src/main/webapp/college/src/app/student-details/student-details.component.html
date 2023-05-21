@@ -10,21 +10,7 @@
 <!--  </ul>-->
 <div>
   <h2>Create Student</h2>
-<!--  <form [formGroup]="studentForm" (submit)="saveData(studentForm)">-->
-<!--    <label for="name">Name</label>-->
-<!--    <input type="text" class='form-control' id="name" ngModel >-->
 
-<!--    <label for="username">Username</label>-->
-<!--    <input type="text" class='form-control' id="username" ngModel >-->
-
-<!--    <label for="password">Password</label>-->
-<!--    <input type="text" class='form-control' id="password" ngModel>-->
-
-<!--    <label for="age">Age</label>-->
-<!--    <input type="number" class='form-control' id="age" ngModel >-->
-
-<!--    <button type="submit" class='form-control'>Create</button>-->
-<!--  </form>-->
   <form #addData="ngForm" (ngSubmit)="saveData(addData.value)">
     <div class="form-group mb-2">
       <input type="text" class="form-control" name="name" placeholder="provide name" ngModel>
@@ -40,4 +26,26 @@
     </div>
     <button type="submit">SUBMIT</button>
   </form>
-</div>
+  </div>
+
+  <div>
+    <table>
+      <thead>
+      <th>name</th>
+      <th>username</th>
+      <th>password</th>
+      <th>age</th>
+
+      </thead>
+      <tbody>
+      <tr *ngFor="let student of studentArray">
+        <td>{{ student.name }}</td>
+        <td>{{ student.username }}</td>
+        <td>{{ student.password }}</td>
+        <td>{{ student.age }}</td>
+      </tr>
+      </tbody>
+
+    </table>
+  </div>
+
