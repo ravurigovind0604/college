@@ -30,4 +30,15 @@ public class StudentService {
     {
         studentRepo.deleteById(id);
     }
+    public Optional<Student> updateStudent(Long id,Student studentData)
+    {
+        Optional<Student> d= studentRepo.findById(id);
+        Student student = d.get();
+        student.setName(studentData.getName());
+        student.setUsername(studentData.getUsername());
+        student.setPassword(studentData.getPassword());
+        student.setAge(studentData.getAge());
+        studentRepo.save(student);
+        return Optional.of(studentRepo.save(student));
+    }
 }
