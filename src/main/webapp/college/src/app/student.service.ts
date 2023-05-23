@@ -10,12 +10,12 @@ export class StudentService {
   constructor(private http: HttpClient) {
    }
    public getData(): Observable<any> {
-       return this.http.get<any>(`http://localhost:8080/createStudent`);
+       return this.http.get<any>(`https://govind-first-project.uc.r.appspot.com/createStudent`);
      }
      public saveData(student:Student):Observable<any>{
      const hdrs =new HttpHeaders({
      'Content-Type':'application/json',
      'Access-Control-Allow-Origin':'*'});
      let httpOptions={headers:hdrs};
-     return this.http.post<any>(`http://localhost:8080/createStudent`,student,httpOptions)}
+     return this.http.post<any>(`https://govind-first-project.uc.r.appspot.com/createStudent`,student,httpOptions)}
 }
