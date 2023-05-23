@@ -35,6 +35,7 @@
       <th>username</th>
       <th>password</th>
       <th>age</th>
+      <th></th>
 
       </thead>
       <tbody>
@@ -43,6 +44,7 @@
         <td>{{ student.username }}</td>
         <td>{{ student.password }}</td>
         <td>{{ student.age }}</td>
+        <td><button type="button" (click)="deleteData(student.id)">Delete</button></td>
       </tr>
       </tbody>
 
