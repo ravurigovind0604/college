@@ -18,4 +18,17 @@ export class StudentService {
      'Access-Control-Allow-Origin':'*'});
      let httpOptions={headers:hdrs};
      return this.http.post<any>(`http://localhost:8080/createStudent`,student,httpOptions)}
+
+//      deleteData(id:number):Observable<any>
+//      {
+//      const url = `http://localhost:8080/createStudent/${id}`;
+//        return this.http.delete<any>(url);
+//
+//       }
+       deleteData(id:number):Observable<any>
+           {
+           const url = `https://govind-first-project.uc.r.appspot.com/createStudent/${id}`;
+             return this.http.delete<any>(url);
+
+            }
 }

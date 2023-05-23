@@ -27,4 +27,10 @@ saveData(data:Student)
 {this.s.saveData(data).subscribe((response)=>{
 console.log(data);
 });}
+
+deleteData(data: number){
+this.s.deleteData(data).subscribe((response)=>{
+console.log(data);
+});
+}
 }
