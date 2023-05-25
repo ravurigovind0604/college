@@ -11,11 +11,17 @@ import { HomeComponent } from './home/home.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import {FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    StudentDetailsComponent
+    StudentDetailsComponent,
+    LoginComponent,
+    HeaderComponent,
+    FooterComponent
 
   ],
   imports: [
