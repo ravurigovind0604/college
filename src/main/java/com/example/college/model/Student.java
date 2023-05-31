@@ -3,11 +3,15 @@ package com.example.college.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "student_id")
     private Long id;
 
     @Column(name="name")
@@ -38,16 +42,32 @@ public class Student {
    @Column(name="age")
    private int age;
 
+
+    public List<Book> getBook() {
+        return book;
+    }
+
+    public void setBook(List<Book> book) {
+        this.book = book;
+    }
+
+    @OneToMany( cascade = CascadeType.ALL)
+//    @JoinColumn(referencedColumnName = "book_id", name="student_id")
+    private List<Book> book = new ArrayList<>();
+
+
+
     // Constructors, getters, and setters
 
     public Student() {
     }
 
-    public Student(String name, int age, String username,String password) {
+    public Student(String name, int age, String username,String password, List<Book> book) {
         this.name = name;
         this.age = age;
         this.username = username;
         this.password = password;
+        this.book = book;
     }
 
     // Getters and setters
