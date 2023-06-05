@@ -23,7 +23,7 @@ public class StudentController {
        return studentService.showAllStudent();
    }
        @GetMapping("/createStudent/{id}")
-               Optional<Student> showStudent(@PathVariable Long id)
+               Student showStudent(@PathVariable Long id)
        {
            return studentService.showStudent(id);
        }
