@@ -7,14 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-// constructor(private s:StudentService )
-// {}
-// ngOnInit(): void {
-//     this.getdata();
-//   }
-// getdata():void{
-// this.s.getData().subscribe((data:Student[])=>{
-// this.studentArray=data;
-// console.log(data);}
-// );}
+
 }
