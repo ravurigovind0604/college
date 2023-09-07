@@ -1,9 +1,9 @@
+// import {ClassRoom} from './class-room';
 export interface Student {
-id: number;
-name?: String;
-password?: String;
-username?: String;
-age?: number;
-
-
+studentId: number;
+studentName?: String;
+studentPassword?: String;
+studentUsername?: String;
+studentAge?: number;
+classRoomId?: number;
 }
