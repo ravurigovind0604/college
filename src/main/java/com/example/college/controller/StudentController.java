@@ -3,6 +3,7 @@ package com.example.college.controller;
 import com.example.college.model.AddStudentResponse;
 import com.example.college.model.Student;
 import com.example.college.model.StudentAndClassRoomDTO;
+import com.example.college.model.StudentDTO;
 import com.example.college.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +27,11 @@ public class StudentController {
        StudentAndClassRoomDTO showStudent(@PathVariable int id)
        {
            return studentService.getAllStudentsWithClassroomDetails(id);
+       }
+       @GetMapping("/showAllStudents")
+       List<StudentDTO> s()
+       {
+           return studentService.s();
        }
     @GetMapping("/login")
     long showStudentByUsernameAndPassword(@RequestParam String username,@RequestParam String password)

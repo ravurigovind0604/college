@@ -82,6 +82,21 @@ public class StudentService {
             studentAndClassRoomDTO.setClassRoomDTO(classRoomDTO);
         return studentAndClassRoomDTO;
     }
+
+    public List<StudentDTO> s() {
+        List<Object[]> l= studentRepo.randomMethod();
+        List<StudentDTO> lo= new ArrayList<StudentDTO>();
+        for(Object[] s: l){
+            StudentDTO studentDTO=new StudentDTO();
+            studentDTO.setStudentId((Integer) s[0]);
+            studentDTO.setStudentUsername((String) s[2] );
+            studentDTO.setStudentPassword((String) s[3]);
+            studentDTO.setStudentAge((Integer) s[0]);
+            studentDTO.setStudentName(null);
+            lo.add(studentDTO);
+        }
+        return lo;
+    }
 }
 
 

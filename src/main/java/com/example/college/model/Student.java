@@ -102,7 +102,6 @@ public class Student {
     }
 
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "student")
-
     private List<Attendance> attendance;
       @ManyToOne(cascade = CascadeType.ALL)
       @JsonManagedReference
